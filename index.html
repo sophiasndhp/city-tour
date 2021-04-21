@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+  <div id="app">
+  <v-app id="inspire">
+    <v-container fluid>
+      <v-row align="center">
+        <v-col cols="6">
+          <v-subheader>
+            Custom items
+          </v-subheader>
+        </v-col>
+  
+        <v-col cols="6">
+          <v-select
+            v-model="select"
+            :hint="`${select.state}, ${select.abbr}`"
+            :items="items"
+            item-text="state"
+            item-value="abbr"
+            label="Select"
+            persistent-hint
+            return-object
+            single-line
+          ></v-select>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
+</div>
+
+<script src ="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>
